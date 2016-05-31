@@ -9,9 +9,9 @@
   <title>Your jekyll site hosted on github pages with bower support</title>
   <meta name="description" content="This blog post is a tutorial to setup a jekyll site with bootstrap installed thanks to bower, and fully hosted on github pages.">
 
-  <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://yourdomain.com/jekyll/update/2016/05/30/jekyll-github-pages-bower-bootstrap.html">
-  <link rel="alternate" type="application/rss+xml" title="Phxlive by Design" href="http://yourdomain.com/feed.xml">
+  <link rel="stylesheet" href="/phxlivebydesign/css/main.css">
+  <link rel="canonical" href="http://fbs70.github.i0/phxlivebydesign/jekyll/update/2016/05/30/jekyll-github-pages-bower-bootstrap.html">
+  <link rel="alternate" type="application/rss+xml" title="Phxlive by Design" href="http://fbs70.github.i0/phxlivebydesign/feed.xml">
 </head>
 
 
@@ -21,7 +21,7 @@
 
   <div class="wrapper">
 
-    <a class="site-title" href="/">Phxlive by Design</a>
+    <a class="site-title" href="/phxlivebydesign/">Phxlive by Design</a>
 
     <nav class="site-nav">
       <a href="#" class="menu-icon">
@@ -35,7 +35,7 @@
       <div class="trigger">
         
           
-          <a class="page-link" href="/about/">About</a>
+          <a class="page-link" href="/phxlivebydesign/about/">About</a>
           
         
           
@@ -431,12 +431,12 @@ $ npm install grunt grunt-bower-task grunt-contrib-connect grunt-contrib-copy gr
 <p>Edit the <code class="highlighter-rouge">_includes/head.html</code> file and add that line:</p>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Custom CSS --&gt;</span>
-<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"/vendor/css/bootstrap.min.css"</span><span class="nt">&gt;</span></code></pre></figure>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"/phxlivebydesign/vendor/css/bootstrap.min.css"</span><span class="nt">&gt;</span></code></pre></figure>
 
 <p>Edit the <code class="highlighter-rouge">_layouts/default.html</code> file and add those lines before <code class="highlighter-rouge">&lt;/body&gt;</code>:</p>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/vendor/js/jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/vendor/js/bootstrap.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/phxlivebydesign/vendor/js/jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/phxlivebydesign/vendor/js/bootstrap.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></figure>
 
 <h3 id="the-baseurl-dilemma">The baseurl dilemma</h3>
 
