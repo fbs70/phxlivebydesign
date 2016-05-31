@@ -6,12 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Phxlive by Design</title>
-  <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
-">
+  <title>Using a Custom Domain on Github</title>
+  <meta name="description" content="I personnally always host my jekyll sites on custom domain names, so I will host that example on http://jekyll-bower-example.fbs70.com instead of http://fbs7...">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://yourdomain.com/">
+  <link rel="canonical" href="http://yourdomain.com/jekyll/update/2016/05/31/custom-domain-github.html">
   <link rel="alternate" type="application/rss+xml" title="Phxlive by Design" href="http://yourdomain.com/feed.xml">
 </head>
 
@@ -55,41 +54,39 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <h1 class="page-heading">Posts</h1>
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Using a Custom Domain on Github</h1>
+    <p class="post-meta"><time datetime="2016-05-31T09:55:00-05:00" itemprop="datePublished">May 31, 2016</time></p>
+  </header>
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">May 31, 2016</span>
+  <div class="post-content" itemprop="articleBody">
+    <p>I personnally always host my jekyll sites on custom domain names, so I will host that example on <a href="http://jekyll-bower-example.fbs70.com">http://jekyll-bower-example.fbs70.com</a> instead of <a href="http://fbs70.github.io/jekyll-bower-example/">http://fbs70.github.io/jekyll-bower-example/</a>.</p>
 
-        <h2>
-          <a class="post-link" href="/jekyll/update/2016/05/31/custom-domain-github.html">Using a Custom Domain on Github</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">May 30, 2016</span>
+<p>That way I don’t need a <code class="highlighter-rouge">baseurl</code> setting and this setup works the same for development and for production. If you really need to keep the <code class="highlighter-rouge">baseurl</code> setting then you should probably create a new ‘production specific’ grunt task that will build jekyll with the <code class="highlighter-rouge">--baseurl URL</code> option.</p>
 
-        <h2>
-          <a class="post-link" href="/jekyll/update/2016/05/30/jekyll-github-pages-bower-bootstrap.html">Your jekyll site hosted on github pages with bower support</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">May 30, 2016</span>
+<p>So, first you need to comment the <code class="highlighter-rouge">baseurl</code> setting in the <code class="highlighter-rouge">_config.yml</code> file:</p>
 
-        <h2>
-          <a class="post-link" href="/jekyll/update/2016/05/30/welcome-to-jekyll.html">Welcome to Jekyll!</a>
-        </h2>
-      </li>
-    
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
-
+<div class="highlighter-rouge"><pre class="highlight"><code># baseurl: "/jekyll-bower-example"
+</code></pre>
 </div>
+
+<p>Then create a <code class="highlighter-rouge">CNAME</code> file with the custom domain name:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>jekyll-bower-example.aymerick.com
+</code></pre>
+</div>
+
+<p>Finally go to your DNS provider website and setup a <code class="highlighter-rouge">CNAME</code> from <code class="highlighter-rouge">jekyll-bower-example.fbs70.com</code> to <code class="highlighter-rouge">fbs70.github.io</code>.</p>
+
+<p>And now, browse to <a href="http://jekyll-bower-example.fbs70.com">http://jekyll-bower-example.fbs70.com</a>.</p>
+
+<p>You should probably see a <code class="highlighter-rouge">404 There isn't a GitHub Page here.</code> error, that’s because it takes some time for github to setup your new custom domain configuration. Just wait a few minutes then try again, you will eventually see your site.</p>
+
+  </div>
+
+</article>
 
       </div>
     </div>
