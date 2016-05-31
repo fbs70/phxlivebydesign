@@ -1,0 +1,20 @@
+{
+  "name": "phxlivebydesign",
+  "homepage": "https://github.com/fbs70/phxlivebydesign",
+  "authors": [
+    "Blair Shotlow <blair.shotlow@gmail.com>"
+  ],
+  "description": "",
+  "main": "_site/index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}
